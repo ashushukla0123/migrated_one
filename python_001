@@ -1,0 +1,19 @@
+from pickle import TRUE
+from flask import Flask, render_template
+
+app =Flask(__name__)
+
+#@app.route('/')
+#def HelloWorld():
+ #   return "This is where we rise and say : \nHello\nBonjour\nNamaste\nHalo to all"
+
+#@app.route('/')
+#def funct():
+ #  return "<p>This is a function to evaluate the value you need</p>"
+
+@app.route('/')
+def fun(x=input("Enter your String X value here : "+str()),y=input("Enter your String Y value here : "+str())):
+    return x+y
+print(fun())
+if __name__ == '__main__':
+    app.run()
